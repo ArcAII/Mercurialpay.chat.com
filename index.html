@@ -355,36 +355,39 @@ h1 {
 <body>
   <div class="sidebar">
     <img src="xv.png" alt="MercurialPay Logo" class="logo-icon" />
+    <div class="nav-section" onclick="showPopup('crypto')"><span class="icon"></span>Crypto</div>
+    <div class="nav-section" onclick="showPopup('discoverFinance')"><span class="icon2"></span>Discover Finance</div>
+    <div class="nav-section" onclick="showPopup('learn')"><span class="icon3"></span>Learn</div>
 
-   <div class="nav-section" onclick="showPopup('crypto')"><span class="icon"></span>Crypto</div>
-<div class="nav-section" onclick="showPopup('discoverFinance')"><span class="icon2"></span>Discover Finance</div>
-<div class="nav-section" onclick="showPopup('learn')"><span class="icon3"></span>Learn</div>
-
-<!-- Pop-ups -->
+<!-- Crypto Pop-up -->
 <div class="popup" id="crypto-popup">
     <div class="popup-content">
-        <span class="close" onclick="closePopup('crypto')">&times;</span>
-        <h2>Crypto Mode Activated</h2>
+        <span class="close-btn" onclick="closeCurrentPopup()">✖</span>
+        <p>Crypto Mode Activated</p>
         <p>Enter the current value of the currency to get started.</p>
-        <input type="text" placeholder="Enter currency value">
+       
     </div>
 </div>
 
+<!-- Discover Finance Pop-up -->
 <div class="popup" id="discoverFinance-popup">
     <div class="popup-content">
-        <span class="close" onclick="closePopup('discoverFinance')">&times;</span>
-        <h2>Discover Finance</h2>
+    
+        <span class="close-btn" onclick="closeCurrentPopup()">✖</span>
+        <p>Discover Finance</p>
         <p>Explore different financial strategies to optimize your resources.</p>
-        <input type="text" placeholder="Enter your financial goals">
+       
     </div>
 </div>
 
+<!-- Learn Pop-up -->
 <div class="popup" id="learn-popup">
     <div class="popup-content">
-        <span class="close" onclick="closePopup('learn')">&times;</span>
-        <h2>Learn Mode Activated</h2>
+        
+        <span class="close-btn" onclick="closeCurrentPopup()">✖</span>
+        <p>Learn Mode Activated</p>
         <p>Enter the topic you want to learn more about.</p>
-        <input type="text" placeholder="Enter topic">
+     
     </div>
 </div>
 
@@ -483,6 +486,21 @@ h1 {
   </button>
 </div>
 <script>
+    function closeCurrentPopup() {
+        var closeBtn = event.target; // The close button that was clicked
+        var popup = closeBtn.closest('.popup'); // Find the nearest ancestor with class 'popup'
+        if (popup) {
+            popup.style.display = 'none'; // Hide the pop-up
+        }
+    }
+    function showPopup(popupType) {
+        document.getElementById(`${popupType}-popup`).style.display = 'block';
+    }
+    
+    function closePopup(popupType) {
+        document.getElementById(`${popupType}-popup`).style.display = 'none';
+    }
+    
     function insertPrompt(promptText) {
         var input = document.getElementById('message-input');
         if (input) {

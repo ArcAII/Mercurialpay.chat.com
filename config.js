@@ -1,2 +1,1 @@
-// config.js
-const API_KEY = 'AIzaSyBVDMox6cz0wgMIuRJ8_kV2rxfbxGRuxc0';
+const API_KEY = 'AIzaSyCwk7yqHm0Cqavy7It0KcS5Owm38THSXkY';
