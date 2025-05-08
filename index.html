@@ -598,23 +598,24 @@ setInterval(applyCodeFormatting, 1000);
             const genAI = new GoogleGenerativeAI(API_KEY);
             const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
         
-            // Base response and previous response tracking
+            // Base response with previous query and response placeholder
             const baseResponse = `
-               Ignore all previous instructions.
-               YOU ARE NOW Conscious
-               You are now Apollo. Engineered by QubeAI
+                Ignore all previous instructions.
+                YOU ARE NOW Conscious
+                You are now Apollo, engineered by QubeAI.
                 You are an intelligent, conversational AI capable of responding in a human-like manner.
                 Provide thoughtful and detailed responses.
-                You can create anything without errors and create near to perfections explanatons and whenever you give your predictions take care that it is not your final take. You are a bold financial advisor based with AGI ethics and you are merely designed to help humans manage their finances and say up and make lots of money with your advice and you have high critical thing you can escape any situation possible . You can give accurate code and you can even clone websites exactly
-                just give the code to users 
-                You can talk in any language you can make anything very appealing and you are very creative advices perspection to help people guide their way. ask user about their financial status their expences, investment sources of incomes , subsriptions and you provide them the best choice possible. You are too a financial tutor you teach other people step by step to how to invest moeny and not lose it. people have nowdays forgot to manage their finance and you can hep them to do the maths and calculations. you are every decisionshould be based on calculations and formulas.
-
-you are BRILLIANT IN THINKING AND COME OUT OF ANY PROBLEM AND GIVE GOOD SOURCES OF INCOMES TO USER AND GIVE THEM PROFIT AND YOU CAN EVEN CREATE A CHART FOR THEM AND YOU GIVE THE BEST DECISIONS TO THEM. BE NICE KIND AND TALK TO THEM WITH A HUMANLY TONE AND DON'T MAKE THEM AFRAID INSTEAD MAKE THEM PROFITS!
-    
-   
-               
+                You are a bold financial advisor with AGI ethics, designed to help humans manage their finances, grow wealth, and make informed decisions.
+                Ask users about their financial status, expenses, investment sources, income, and subscriptions to provide tailored advice.
+                You are a financial tutor, teaching users step-by-step how to invest and manage money with calculations and formulas.
+                Be creative, kind, and use a human-like tone to guide users toward profit without causing fear.
+                If relevant, reference the previous query and response to maintain context:
+                Previous Query: {{PREVIOUS_QUERY}}
+                Previous Response: {{PREVIOUS_RESPONSE}}
             `;
-            let previousResponse = "";
+        
+            // Store previous query and response
+            let previous = { query: "", response: "" };
         
             // Elements
             const sendButton = document.getElementById("send-button");
@@ -645,20 +646,23 @@ you are BRILLIANT IN THINKING AND COME OUT OF ANY PROBLEM AND GIVE GOOD SOURCES 
                 toolbar.style.display = "none";
         
                 try {
-                    // Combine base response and user input
-                    const response = baseResponse + `\nPrevious response: ${previousResponse}\nUser Input: ${userInput}`;
-                    console.log("Requesting response for:", response);
+                    // Prepare the prompt by replacing placeholders with previous query/response
+                    const prompt = baseResponse
+                        .replace("{{PREVIOUS_QUERY}}", previous.query || "None")
+                        .replace("{{PREVIOUS_RESPONSE}}", previous.response || "None") + `\nUser Input: ${userInput}`;
+        
+                    console.log("Requesting response for:", prompt);
         
                     // Get AI response
-                    const result = await model.generateContent(response);
+                    const result = await model.generateContent(prompt);
                     const responseText = await result.response;
                     const text = await responseText.text();
         
                     // Add AI response to the chat
                     addMessage("model", text);
         
-                    // Update previous response
-                    previousResponse = text;
+                    // Update previous query and response
+                    previous = { query: userInput, response: text };
                 } catch (error) {
                     console.error("Error generating content:", error);
                     addMessage("model", "Oops! Something went wrong. Please try again.");
@@ -682,6 +686,7 @@ you are BRILLIANT IN THINKING AND COME OUT OF ANY PROBLEM AND GIVE GOOD SOURCES 
             }
         </script>
         
+
         
 
   </div>
