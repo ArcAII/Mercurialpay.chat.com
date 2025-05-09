@@ -66,7 +66,7 @@ Got feature ideas or found a bug? Open an issue or reach out!
 
 ## 📲 Try It Out
 
-👉 [https://mercurialpay.ai](https://mercurialpay.ai) *(replace with actual URL)*
+👉 https://arcaii.github.io/Mercurialpay.chat.com/
 
 ---
 
