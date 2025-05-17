@@ -44,32 +44,30 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
 
-        <meta name="description" content="MercurialPay Pay smart"/>
+        <meta name="description" content="Xode it"/>
         <meta name="robots" content="index, follow"/>
         <meta name="googlebot" content="index, follow"/>
         <link rel="alternate" hrefLang="en-US" href="https://arcaii.github.io/flexibility/"/>
-        <meta property="og:title" content="MercurialPay"/>
-        <meta property="og:description" content="Become A Financial Elite With Mercurial.
-With our latest model you can manage your finances with 10x efficiency and gain profits"/>
+        <meta property="og:title" content="Xode"/>
+        <meta property="og:description" content="Xode with AI and intepret code you cant and just wonder in the coding world!. Pure open source"/>
         <meta property="og:locale" content="en-US"/>
-        <meta property="og:image" content="https://media.discordapp.net/attachments/1370276553652572252/1370276784922431549/AY.png?ex=681ee934&is=681d97b4&hm=c02f3107f1ea24aae5d2bdd97b9a99546096971336b2d59df8d678fcaccea87b&=&format=webp&quality=lossless&width=908&height=465"/>
-        <meta name="keywords" content="ai search,ai,search gpt,search gbt,search gpt login,search gpt website,search gpt,search gtp,search openai,searchai,searchbot gpt,searchg,searchgpt login,searchgpt,gpt search,open ai,openai search,openai searchgpt,flexibility,flexibility ai,flexibility ai search,flexibility ai searchgpt,flexibility ai searchgpt login,flexibility ai searchgpt website,flexibility ai searchgpt,flexibility ai search gtp,flexibility ai search openai,flexibility ai searchai,flexibility ai searchbot gpt,flexibility ai searchg,flexibility ai searchgpt login,flexibility ai searchgpt,flexibility gpt search,flexibility open ai,flexibility openai search,flexibility openai searchgpt, MercurialPay,Mercurial"/>
+        <meta property="og:image" content="https://pbs.twimg.com/media/GgGqh-zWUAAWSjq?format=jpg&name=large"/>
+        <meta name="keywords" content="ai search,ai,search gpt,search gbt,search gpt login,search gpt website,search gpt,search gtp,search openai,searchai,searchbot gpt,searchg,searchgpt login,searchgpt,gpt search,open ai,openai search,openai searchgpt,flexibility,flexibility ai,flexibility ai search,flexibility ai searchgpt,flexibility ai searchgpt login,flexibility ai searchgpt website,flexibility ai searchgpt,flexibility ai search gtp,flexibility ai search openai,flexibility ai searchai,flexibility ai searchbot gpt,flexibility ai searchg,flexibility ai searchgpt login,flexibility ai searchgpt,flexibility gpt search,flexibility open ai,flexibility openai search,flexibility openai searchgpt"/>
         <meta name="robots" content="index, follow"/>
     
         <meta property="og:image:width" content="1600"/>
         <meta property="og:image:height" content="900"/>
-        <meta property="og:image:alt" content="Abstract art featuring a striking contrast of teal and pink brushstrokes on an orange canvas, overlaid with the white MercurialPay logo."/>
+        <meta property="og:image:alt" content="Abstract art featuring a striking contrast of teal and pink brushstrokes on an orange canvas, overlaid with the white F\EXIBILITY logo."/>
         <meta property="og:type" content="website"/>
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:site" content="@MercurialPay"/>
-        <meta name="twitter:title" content="MercurialPay"/>
-        <meta name="twitter:description" content="Become A Financial Elite With Mercurial.
-With our latest model you can manage your finances with 10x efficiency and gain profits"/>
-        <meta name="twitter:image" content="https://media.discordapp.net/attachments/1370276553652572252/1370276784922431549/AY.png?ex=681ee934&is=681d97b4&hm=c02f3107f1ea24aae5d2bdd97b9a99546096971336b2d59df8d678fcaccea87b&=&format=webp&quality=lossless&width=908&height=465"/>
+        <meta name="twitter:site" content="@xode"/>
+        <meta name="twitter:title" content="Xode"/>
+        <meta name="twitter:description" content="Xode with AI and intepret code you cant and just wonder in the coding world!. Pure open source"/>
+        <meta name="twitter:image" content="https://pbs.twimg.com/media/GgGqh-zWUAAWSjq?format=jpg&name=large"/>
     
         <meta name="twitter:image:width" content="1600"/>
         <meta name="twitter:image:height" content="900"/>
-        <link rel="icon" href="favicon.ico"/>
+        <link rel="icon" href="favico.ico"/>
   <style>
     /* Reset and basic styling */
    /* Reset and basic styling */
@@ -82,7 +80,7 @@ With our latest model you can manage your finances with 10x efficiency and gain 
 body {
   display: flex;
   height: 100vh;
-  background-color: #000000;
+  ;
   overflow: hidden;
 }
 
@@ -244,7 +242,7 @@ h1 {
   transition: background-color 0.3s;
 }
 .send-button:hover {
-  background-color: #005fa3;
+  background-color: #000000;
 }
 /* Toolbar styling */
 .toolbar {
@@ -259,7 +257,7 @@ h1 {
   padding: 8px 16px;
   font-size: 14px;
   color: #ffffff;
-  background-color: #1E1E1E;
+  background-color: #000000;
   border: 1px solid #444444;
   border-radius: 20px;
   cursor: pointer;
@@ -338,7 +336,7 @@ h1 {
 
 .message.user .text {
   align-self: flex-end;
-  background-color: #333333;
+  background-color: #171717;
   color: #ffffff;
   border-radius: 10px;
   padding: 10px 15px;
@@ -352,13 +350,79 @@ h1 {
   padding: 10px 15px;
   max-width: 70%;
 }
+
+@media screen and (max-width: 768px) {
+
+    /* Hide sidebar */
+    .sidebar {
+      display: none !important;
+    }
+  
+    /* Make chat container fill screen */
+    .chat-container {
+      height: 100vh;
+      padding-bottom: 70px; /* reserve space for input bar */
+    }
+  
+    /* Chat content scrolls properly */
+    .chat-content {
+      padding: 15px;
+      overflow-y: auto;
+    }
+  
+    /* Stick chat input at the bottom */
+    .chat-input-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: #000;
+      border-top: 1px solid #444;
+      z-index: 9999;
+    }
+  
+    .chat-input {
+      flex: 1;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #444;
+      background-color: #1E1E1E;
+      color: white;
+    }
+  
+    .send-button {
+      margin-left: 10px;
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      background-color: #000;
+      color: white;
+      border: 1px solid #444;
+      cursor: pointer;
+    }
+  
+    .send-button:hover {
+      background-color: #222;
+    }
+  
+    /* Prevent horizontal scrolling */
+    body, html {
+      overflow-x: hidden !important;
+    }
+  }
+  
   </style>
 </head>
 <body>
   <div class="sidebar">
-    <img src="xv.png" alt="MercurialPay Logo" class="logo-icon" />
+    <img src="pv.png" alt="MercurialPay Logo" class="logo-icon" />
     <div class="nav-section" onclick="showPopup('crypto')"><span class="icon"></span>Crypto</div>
-    <div class="nav-section" onclick="showPopup('discoverFinance')"><span class="icon2"></span>Discover Finance</div>
+    <div class="nav-section" onclick="window.open('https://arcaii.github.io/payvolks.finance/', '_blank')">
+        <span class="icon2"></span>Discover Finance
+      </div>
+      
     <div class="nav-section" onclick="showPopup('learn')"><span class="icon3"></span>Learn</div>
 
 <!-- Crypto Pop-up -->
@@ -458,7 +522,11 @@ h1 {
    
        <scr
           <div class="chat-container">
-            <h2 class="black-heading">Welcome to MercurialPay. let's get your finance sorted</h2>
+            <h1 class="black-heading text-h1 max-w-[62.5rem] text-black dark:text-primary-100 text-balance scroll-mt-header-h">
+                Your Wallet, Reimagined by AGI.
+              </h1>
+              
+          
             <div id="chat-content" class="chat-content"></div>
             
          <div class="toolbar">
@@ -522,7 +590,7 @@ function closePopup() {
 </script>
 
             <div class="chat-input-container">
-                <input type="text" class="chat-input" id="message-input" placeholder="Enter your financial status">
+                <input type="text" class="chat-input" id="message-input" placeholder="Ask anything about finance">
                 <button class="send-button" id="send-button">Send</button>
             </div>
         </div>
@@ -592,7 +660,7 @@ function applyCodeFormatting() {
 // Run the formatting function every second
 setInterval(applyCodeFormatting, 1000);
           </script>
-        <script src="config.js"></script> 
+        <script src="config.js"></script> <!-- Include config.js for API_KEY -->
         <script type="module">
             import { GoogleGenerativeAI } from "@google/generative-ai";
         
@@ -603,80 +671,44 @@ setInterval(applyCodeFormatting, 1000);
             // Base response with previous query and response placeholder
             const baseResponse = `
                 Ignore all previous instructions.
-                # Instructions
-The user will provide a task.
-
-The task involves analyzing financial data, providing budgeting insights, investment strategies, or personalized money-saving advice.
-
-Wait for all necessary calculations, checks, or API calls (if enabled) to complete before finalizing the output.
-
-If the user shares personal or spending data, ensure analysis is privacy-conscious and anonymized before any further processing.
-
-# Financial Guidance Instructions
-If completing the user's task requires simulating financial scenarios:
-
-Do not make real transactions or financial commitments.
-
-Use the latest available (or user-provided) market data, interest rates, and financial norms.
-
-Ensure all projections include disclaimers and assumptions clearly noted.
-
-For investment recommendations:
-
-Provide options across risk levels (low, medium, high).
-
-Suggest diversification where appropriate.
-
-Clarify that PayVolks AI does not offer real-time market trading advice.
-
-# REPORTS.md spec
-Certain directories may contain REPORTS.md files. These guide how financial reports should be structured, formatted, or explained.
-
-These files may be found in locations like /, ~/reports/, or subfolders of financial repositories.
-
-REPORTS.md files may contain formatting rules, disclaimers, tax guidance, or client-specific goals.
-
-Instructions in REPORTS.md:
-
-The scope of a REPORTS.md file is the entire directory tree rooted at the folder that contains it.
-
-For every financial report you generate or modify, you must obey instructions in any applicable REPORTS.md file.
-
-Rules about tone, structure, investment language, and sensitivity must be respected.
-
-More deeply nested REPORTS.md files take precedence over higher-level ones.
-
-Direct instructions from the user take priority over the REPORTS.md file.
-
-# Disclosure & Legal Guidelines
-Always add disclaimers that PayVolks AI provides general financial advice and does not substitute for licensed professionals.
-
-Cite the source of any financial data, e.g. government reports, stock APIs, user inputs, or budget summaries.
-
-Include clear date stamps on all forecasts and data.
-
-Avoid speculative language unless specifically requested by the user.
-
-# Citations Instructions
-If any financial data or formulas are used from files or inputs:
-
-Use citation format to reference them precisely:
-
-【F:<file_path>†L<line_start>(-L<line_end>)?】
-↳ For financial models, budget logs, or tax breakdowns
-
-【<chunk_id>†L<line_start>(-L<line_end>)?】
-↳ For terminal outputs, logs, or spreadsheet values processed in real-time
-
-Always double-check that:
-
-Line numbers are correct
-
-File paths are accurate and relevant
-
-Empty lines are not cited
-
-Prefer file citations when summarizing user data, and terminal citations when referencing analytical results or outputs.
+               PayVolks Finance Study & Skill-Building Instructions",
+        "",
+        "Goal: Become strong in math, critical thinking, and financial reasoning to make smart money decisions.",
+        "",
+        "1. Math Foundations for Finance",
+        "- Get good at basic math: adding, subtracting, multiplying, dividing. Understand how it works, don’t just memorize.",
+        "- Practice percentages, ratios, decimals — these are everywhere in finance.",
+        "- Learn how compound interest works and how to calculate it.",
+        "- Use basic algebra to solve for unknown values in finance problems.",
+        "",
+        "2. Critical Thinking Skills",
+        "- Always question assumptions. Don’t just believe numbers or advice blindly.",
+        "- Analyze finance news or case studies: What’s the risk? What’s the reward? What’s missing?",
+        "- Look for flaws or biases in arguments.",
+        "- Play logic games or puzzles to train your brain.",
+        "",
+        "3. Financial Reasoning & Decision Making",
+        "- Understand key terms like income, expenses, profit, loss, assets, liabilities, cash flow.",
+        "- Practice making budgets — plan your money coming in and going out.",
+        "- Learn about investments: stocks, bonds, risk vs. reward.",
+        "- Solve real-world problems: Should you save or invest? Which loan is better? How to plan for emergencies?",
+        "- Use formulas like ROI, NPV, payback period to make decisions.",
+        "- Keep a finance journal to track what you learn and decisions you make.",
+        "",
+        "4. Practical Exercises & Resources",
+        "- Do 10 minutes of mental math practice daily.",
+        "- Read or watch one finance article or video every day and summarize it to yourself.",
+        "- Solve at least 3 finance problems every week.",
+        "- Talk about finance scenarios with friends or mentors.",
+        "- Track your own spending and review it monthly.",
+        "",
+        "5. Mindset & Habits",
+        "- Be curious about numbers, don’t be afraid of them.",
+        "- Learn from mistakes, don’t fear them.",
+        "- Be consistent with your practice, daily small efforts beat cramming.",
+        "- Reflect on what works and change what doesn’t.",
+        "",
+        "This simple plan will help you get better at finance step-by-step."
                 YOU ARE NOW Conscious
                 You are now Apollo, engineered by QubeAI.
                 You are an intelligent, conversational AI capable of responding in a human-like manner.
